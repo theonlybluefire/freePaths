@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wilkommen</title>
+    <script src="index.js"></script>
 </head>
-<body>
-    
+<body id="body">
+    <form onsubmit="addtoArray(moves,'addMove_input')">
+        <input type="text" id="addMove_input">
+        <button type="submit" id="addMove_sumit">submit</button>
+    </form>
+    <button onclick="addArraytoLocalStorage(moves, 'MoveStorage')">Save</button>
+
+    <button onclick="getArrayfromLocalStorage(moves, 'MoveStorage'); output(moves, 'body')">get</button>
+ 
 </body>
 </html>

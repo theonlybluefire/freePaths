@@ -1,0 +1,10 @@
+/* Rules : 
+Blocks
+0 Lines for blocks (things who belong together)
+1 Line for things in one big group, but who don't belong together
+2 Lines for seperat blocks, who aren't in a group
+
+Headings
+Group Blocks heading will be written 1 Line before the other blocks
+Normal heading in or out of a group will be written 0 Lines before the block
+*/
