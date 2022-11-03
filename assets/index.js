@@ -9,7 +9,7 @@ Group Blocks heading will be written 1 Line before the other blocks
 Normal heading in or out of a group will be written 0 Lines before the block
 */
 
-
+/*
 //deklaration arrays/variable
 var moves = ['turnVault', 'reverseVault']
 
@@ -38,3 +38,4 @@ function output(js_output, id_to_add) {
     ${js_output}
     `
 }
+*/

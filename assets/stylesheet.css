@@ -8,3 +8,19 @@ Headings
 Group Blocks heading will be written 1 Line before the other blocks
 Normal heading in or out of a group will be written 0 Lines before the block
 */
+
+.body {
+    background-color: black;
+}
+
+.start_button {
+    margin: 325px auto;
+
+    border-radius: 10px;
+}
+.kontakt_button {
+    color: white;
+}
+.kontakt_button:hover {
+    color: #8BC34A;
+}
