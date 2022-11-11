@@ -6,31 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wilkommen</title>
 
-    <!--Material Design-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-        <!--Custom CSS-->
-        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_green-green.min.css" />
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200;500&display=swap" rel="stylesheet">
+
     <!--other Implementations-->
     <script src="index.js"></script>
     <link rel="stylesheet" href="stylesheet.css">
 
 </head>
 <body class="body" id="body">
+  
+  
+  
+  <div class="container">
+    <button type="button" class="btn btn-dark start_planing_button" onclick="start_planing()">start planing</button>
+  </div>
+  <div class="container">
+    <button class="btn btn-success guide_button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Guide</button>
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel">Guide</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="row">
+          <h2>Welcome to our Project</h2>
+          <p>It's all about the Parkour training and how to improve your abilities</p>
+          <p>Here you can create an individual traning plan to reach your goals in parkour</p>        
+          <h3>How to use our Project</h3>
+          <p>...</p>
+        </div>
+        <button type="button" class="btn btn-dark text-center">more about the project</button>
+      </div>
+    </div>
+  </div>
 
-    <!-- Colored raised button -->
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored start_button" id="start_button_id">
-    Start
-  </button>
-<!-- Icon button -->
-<button class="mdl-button mdl-js-button mdl-button--icon kontakt_button" id="kontakt_button_id">
-    <i class="material-icons">comment</i>
-  </button>
 
+  <!--Botstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
