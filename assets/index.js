@@ -40,7 +40,7 @@ function output(js_output, id_to_add) {
 }
 */
 //definition
-
+let clicked ='false'
 var Basic_movements = [
     'Landing',
     'Parkour Roll',
@@ -71,18 +71,27 @@ function start_planing() {
 }
 
 
-function load_array(arrayname, divname_outer, lenght_array) { //Bei lenght_array mit 0 zählen heißt einfach alle Werte zählen mit Zero
-    var i2 = 0
-    let div_container_outer = document.getElementById(divname_outer);
-    if (i2==0) {
-    //einfügen der benötigten Elemente
+function load_array(arrayname, divname_outer, lenght_array) { 
+    if(clicked=='false') {
+        let div_container_outer = document.getElementById(divname_outer);
+        //einfügen der benötigten Elemente mit einer for schleife die so oft ausgeführt wird wie benötigt
         for ( let i=0; i<lenght_array; i++) {
-            div_container_outer.innerHTML += `<a href="#" class="list-group-item list-group-item-action" id="addClass"></a>`
+            console.log(i);
+            div_container_outer.innerHTML += `<a href="#" class="list-group-item list-group-item-action" id="addClass" onlick="checked()"></a>`;
             let addClass_value = document.getElementById('addClass').classList.add('list_item_',i);
             let div_container_inner = document.getElementsByTagName('a')[i];
             div_container_inner.innerHTML += arrayname[i];
-            i2 = 1
-        }
+        } 
     }
+    else {
+        console.log('Clicked false');
+    }
+    console.log('Clicked = true');
+    clicked= 'true';
+    console.log(clicked)
+    
 }
 
+function checked() {
+    console.log('Test');
+}
