@@ -61,9 +61,6 @@ var Basic_movements = [
 
 
 
-
-
-
 //buttons
 
 function start_planing() {
@@ -75,11 +72,15 @@ function load_array(arrayname, divname_outer, lenght_array) {
     if(clicked=='false') {
         let div_container_outer = document.getElementById(divname_outer);
         //einfügen der benötigten Elemente mit einer for schleife die so oft ausgeführt wird wie benötigt
-        for ( let i=0; i<lenght_array; i++) {
-            console.log(i);
-            div_container_outer.innerHTML += `<a href="#" class="list-group-item list-group-item-action" id="addClass" onlick="checked()"></a>`;
-            let addClass_value = document.getElementById('addClass').classList.add('list_item_',i);
+        for ( var i=0; i<lenght_array; i++) {
+            div_container_outer.innerHTML += `<a href="#" class="list-group-item list-group-item-action" id="addClass"></a>`
+            let addClass_value = document.getElementsByTagName('a')[i].classList.add(i);
             let div_container_inner = document.getElementsByTagName('a')[i];
+            let i3 = i;
+            .document.getElementsByTagName('a')[i].onclick = function() {
+                console.log(i);
+                console.log('test');
+            }
             div_container_inner.innerHTML += arrayname[i];
         } 
     }
@@ -92,6 +93,6 @@ function load_array(arrayname, divname_outer, lenght_array) {
     
 }
 
-function checked() {
-    console.log('Test');
+function checked(test) {
+    console.log(test);
 }
