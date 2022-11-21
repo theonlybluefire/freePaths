@@ -58,7 +58,7 @@ var Basic_movements = [
     'Underbar',
     'Tic Tac',
     'strides']
-
+var Basic_movements_onclick = {};
 
 
 //buttons
@@ -76,23 +76,21 @@ function load_array(arrayname, divname_outer, lenght_array) {
             div_container_outer.innerHTML += `<a href="#" class="list-group-item list-group-item-action" id="addClass"></a>`
             let addClass_value = document.getElementsByTagName('a')[i].classList.add(i);
             let div_container_inner = document.getElementsByTagName('a')[i];
-            let i3 = i;
-            .document.getElementsByTagName('a')[i].onclick = function() {
-                console.log(i);
-                console.log('test');
+            div_container_inner.innerHTML += arrayname[i];  
+        }
+
+        for (var i = 0; i <lenght_array ; i++) {
+            Basic_movements_onclick[i] = document.getElementsByTagName('a')[i].onclick = function() {
+                //wie soll ich 
             }
-            div_container_inner.innerHTML += arrayname[i];
-        } 
-    }
-    else {
-        console.log('Clicked false');
-    }
+        }   
+
     console.log('Clicked = true');
     clicked= 'true';
     console.log(clicked)
     
+    }
 }
-
 function checked(test) {
     console.log(test);
 }
