@@ -58,7 +58,9 @@ var Basic_movements = [
     'Underbar',
     'Tic Tac',
     'strides']
-var Basic_movements_onclick = {};
+var self_aded_values = [
+
+]
 
 
 //buttons
@@ -68,29 +70,24 @@ function start_planing() {
 }
 
 
-function load_array(arrayname, divname_outer, lenght_array) { 
+function load_array(arrayname, divname_outer, lenght_array, function_for_onclick) { 
     if(clicked=='false') {
         let div_container_outer = document.getElementById(divname_outer);
-        //einfügen der benötigten Elemente mit einer for schleife die so oft ausgeführt wird wie benötigt
         for ( var i=0; i<lenght_array; i++) {
             div_container_outer.innerHTML += `<a href="#" class="list-group-item list-group-item-action" id="addClass"></a>`
             let addClass_value = document.getElementsByTagName('a')[i].classList.add(i);
             let div_container_inner = document.getElementsByTagName('a')[i];
             div_container_inner.innerHTML += arrayname[i];  
         }
-
-        for (var i = 0; i <lenght_array ; i++) {
-            Basic_movements_onclick[i] = document.getElementsByTagName('a')[i].onclick = function() {
-                //wie soll ich 
-            }
-        }   
-
-    console.log('Clicked = true');
-    clicked= 'true';
-    console.log(clicked)
     
     }
 }
 function checked(test) {
     console.log(test);
+}
+function form_submit_add_item() {
+    let input = document.getElementById('input_id_add_item').value
+    self_aded_values.push(input);
+    console.log(self_aded_values);
+    
 }
