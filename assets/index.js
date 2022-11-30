@@ -61,7 +61,9 @@ var Basic_movements = [
 var self_aded_values = [
 
 ]
+var Basic_movements_onclick[
 
+]
 
 //buttons
 
@@ -79,15 +81,14 @@ function load_array(arrayname, divname_outer, lenght_array, function_for_onclick
             let div_container_inner = document.getElementsByTagName('a')[i];
             div_container_inner.innerHTML += arrayname[i];  
         }
-    
+        for(var i=0; i<lenght_array;i++) {
+            Basic_movements_onclick[i] = document.getElementsByTagName('a')[i].onclick = function() {
+                let test2[i] = document.getElementById('a')[i].style.background
+            }
+        }
+    clicked = 'true';
     }
 }
 function checked(test) {
     console.log(test);
-}
-function form_submit_add_item() {
-    let input = document.getElementById('input_id_add_item').value
-    self_aded_values.push(input);
-    console.log(self_aded_values);
-    
 }

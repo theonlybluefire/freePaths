@@ -8,4 +8,35 @@ Headings
 Group Blocks heading will be written 1 Line before the other blocks
 Normal heading in or out of a group will be written 0 Lines before the block
 */
+/* Positioning*/
+
+.middle {
+    width: 25%;
+    height: auto;
+    display: block;
+    margin: 325px auto;
+    
+}
+
+.absoulute {
+    position: absolute;
+}
+
+
+
+
+/*Animations*/
+.onload_animation {
+    animation: onload 3s;
+}
+@keyframes  onload {
+    0%{
+        opacity: 0;
+        transform: translate(-5%,0);
+    }
+    100% {
+        
+    }
+    
+}
 
