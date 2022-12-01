@@ -61,9 +61,13 @@ var Basic_movements = [
 var self_aded_values = [
 
 ]
-var Basic_movements_onclick[
+var Basic_movements_onclick = [
 
 ]
+var Basic_movements_onclick_clicked = [
+
+]
+var Basic_movements_onclick_clicked_color
 
 //buttons
 
@@ -81,10 +85,13 @@ function load_array(arrayname, divname_outer, lenght_array, function_for_onclick
             let div_container_inner = document.getElementsByTagName('a')[i];
             div_container_inner.innerHTML += arrayname[i];  
         }
-        for(var i=0; i<lenght_array;i++) {
-            Basic_movements_onclick[i] = document.getElementsByTagName('a')[i].onclick = function() {
-                let test2[i] = document.getElementById('a')[i].style.background
+        Basic_movements_onclick[i] = document.getElementsByTagName('a')[0].onclick = function() {
+            if (Basic_movements_onclick_clicked[0] == false) {
+                Basic_movements_onclick_clicked_color[0] = document.getElementsByTagName['a'][0].style.backgroundColor = "green";
+                //ich möchte bei jedem Element eine neue Funktion einrichten, allerdings wird somit ein limit gegeben 
+
             }
+        
         }
     clicked = 'true';
     }
