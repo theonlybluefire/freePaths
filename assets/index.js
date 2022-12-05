@@ -99,3 +99,9 @@ function load_array(arrayname, divname_outer, lenght_array, function_for_onclick
 function checked(test) {
     console.log(test);
 }
+//Array
+function addItem() {
+    let ItemInput = document.getElementsByTagName('input')[0].value;
+    console.log(ItemInput);
+
+}
