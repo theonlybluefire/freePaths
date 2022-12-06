@@ -38,6 +38,38 @@ function output(js_output, id_to_add) {
     ${js_output}
     `
 }
+
+
+
+
+
+
+
+
+
+function load_array(arrayname, divname_outer, lenght_array, function_for_onclick) { 
+    if(clicked=='false') {
+        let div_container_outer = document.getElementById(divname_outer);
+        for ( var i=0; i<lenght_array; i++) {
+            div_container_outer.innerHTML += `<a href="#" class="list-group-item list-group-item-action" id="addClass"></a>`
+            let addClass_value = document.getElementsByTagName('a')[i].classList.add(i);
+            let div_container_inner = document.getElementsByTagName('a')[i];
+            div_container_inner.innerHTML += arrayname[i];  
+        }
+        Basic_movements_onclick[i] = document.getElementsByTagName('a')[0].onclick = function() {
+            if (Basic_movements_onclick_clicked[0] == false) {
+                Basic_movements_onclick_clicked_color[0] = document.getElementsByTagName['a'][0].style.backgroundColor = "green";
+                //ich möchte bei jedem Element eine neue Funktion einrichten, allerdings wird somit ein limit gegeben 
+
+            }
+        
+        }
+    clicked = 'true';
+    }
+}
+function checked(test) {
+    console.log(test);
+}
 */
 //definition
 let clicked ='false'
@@ -75,33 +107,27 @@ function start_planing() {
     window.location = "../sites/choose_skills.html"
 }
 
-
-function load_array(arrayname, divname_outer, lenght_array, function_for_onclick) { 
-    if(clicked=='false') {
-        let div_container_outer = document.getElementById(divname_outer);
-        for ( var i=0; i<lenght_array; i++) {
-            div_container_outer.innerHTML += `<a href="#" class="list-group-item list-group-item-action" id="addClass"></a>`
-            let addClass_value = document.getElementsByTagName('a')[i].classList.add(i);
-            let div_container_inner = document.getElementsByTagName('a')[i];
-            div_container_inner.innerHTML += arrayname[i];  
-        }
-        Basic_movements_onclick[i] = document.getElementsByTagName('a')[0].onclick = function() {
-            if (Basic_movements_onclick_clicked[0] == false) {
-                Basic_movements_onclick_clicked_color[0] = document.getElementsByTagName['a'][0].style.backgroundColor = "green";
-                //ich möchte bei jedem Element eine neue Funktion einrichten, allerdings wird somit ein limit gegeben 
-
-            }
-        
-        }
-    clicked = 'true';
-    }
-}
-function checked(test) {
-    console.log(test);
-}
 //Array
 function addItem() {
     let ItemInput = document.getElementsByTagName('input')[0].value;
     console.log(ItemInput);
+    console.log('added value');
+    self_aded_values.push(ItemInput);
+    window.localStorage.setItem('self_aded_values',self_aded_values);
 
+}
+function load_array_self() {
+    self_aded_values = localStorage.getItem('self_aded_values');
+    console.log(self_aded_values);
+    lenght_array = 2
+    if(clicked=='false') {
+        let div_container_outer = document.getElementById('self_added_values_list');
+        for ( var i=0; i<lenght_array; i++) {
+            div_container_outer.innerHTML += `<a href="#" class="list-group-item list-group-item-action" id="addClass"></a>`
+            let addClass_value = document.getElementsByTagName('a')[i].classList.add(i);
+            let div_container_inner = document.getElementsByTagName('a')[i];
+            div_container_inner.innerHTML += self_aded_values[i];  
+        }
+    clicked = 'true';
+    }
 }
