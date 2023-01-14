@@ -21,8 +21,12 @@ Normal heading in or out of a group will be written 0 Lines before the block
 .absoulute {
     position: absolute;
 }
-
-
+.oneDown {
+    transform: translate(20%,40%);
+}
+.fourDown {
+    transform: translate(0%, 920%);
+}
 
 
 /*Animations*/
@@ -35,8 +39,29 @@ Normal heading in or out of a group will be written 0 Lines before the block
         transform: translate(-5%,0);
     }
     100% {
-        
     }
     
+}
+.buttonAni {
+    animation:  button 0.5s;
+}
+@keyframes button {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.87);
+    }
+    90%{
+        transform: scale(0.9);
+    }
+
+}
+/*colors*/
+.grey {
+    color: rgb(66, 66, 66);
+}
+body {
+    background-color: #141414;
 }
 

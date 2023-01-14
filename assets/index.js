@@ -127,7 +127,7 @@ var Basic_movements_onclick_clicked_color
 
 //buttons
 
-function start_planing() {
+function startPlaning() {
     window.location = "../sites/choose_skills.html"
 }
 
@@ -140,7 +140,7 @@ function addItem() {
     window.localStorage.setItem('self_aded_values',self_aded_values);
 
 }
-function load_array_self() {
+function loadArraySelf() {
     self_aded_values = localStorage.getItem('self_aded_values');
     console.log(self_aded_values);
     lenght_array = 2
@@ -154,4 +154,13 @@ function load_array_self() {
         }
     clicked = 'true';
     }
+}
+
+//animations
+function buttonAni(id,side) {
+    let button = document.getElementById(id)
+    button.classList.add('buttonAni');
+    setTimeout(function() {
+        window.location = side;
+    },350)
 }
