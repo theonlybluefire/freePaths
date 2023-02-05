@@ -36,18 +36,81 @@ Normal heading in or out of a group will be written 0 Lines before the block
 
 
 /*Animations*/
-.onload_animation {
-    animation: onload 3s;
+.onloadOne {
+    animation: onloadOneKeyframe 6s;
 }
-@keyframes  onload {
+@keyframes onloadOneKeyframe {
     0%{
         opacity: 0;
-        transform: translate(-5%,0);
+        color: white;
+        transform: translate(0%,400%);
     }
-    100% {
+    75% {
+        opacity: 1;
+        color: white;
+        transform: translate(0%,400);
     }
-    
+
 }
+.onloadTwo {
+    animation: onloadTwoKeyframe 10s;
+}
+@keyframes onloadTwoKeyframe {
+    0% {
+        color: white;
+        opacity: 0;
+        transform: translate(0%,400%);
+    }
+    25%{
+        color: white;
+        opacity: 0;
+        transform: translate(0%,400%);
+    }
+    75%{
+      color: white;
+      opacity: 1;  
+      transform: translate(0%,400%);
+    }
+
+    100%{
+        
+    }
+}
+.onloadThree{
+    animation: onloadThreeKeyframe 7s;
+}
+@keyframes onloadThreeKeyframe {
+    0%{
+        background-color: black
+    }
+    50% {
+        background-color: black;
+    }
+    70%{
+        background-color: black;
+
+    }
+}
+.onloadFour{
+    animation: onloadFourKeyframe 8s;
+}
+@keyframes onloadFourKeyframe {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
 .buttonAni {
     animation:  button 0.5s;
 }
@@ -79,7 +142,7 @@ Normal heading in or out of a group will be written 0 Lines before the block
 }
 /*colors*/
 .grey {
-    color: rgb(66, 66, 66);
+    color: rgb(122, 122, 122);
 }
 body {
     background-color: #141414;
