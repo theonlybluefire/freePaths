@@ -15,40 +15,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200;500&display=swap" rel="stylesheet">
 
     <!--other Implementations-->
-    <script src="index.js"></script>
-    <script src="../assets/index.js"></script>
-    <link rel="stylesheet" href="../assets/stylesheet.css">
+    <script src="choose_skills.js"></script>
+    <link rel="stylesheet" href="choose_skills.css">
+
 
 </head>
-<body class="body" id="body">
-    <h1>Chose the skills that you can</h1>
-    <p>
-        <button class="btn btn-success container-fluid" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          Basic Movements
-        </button>
-    </p>
-        <div class="collapse" id="collapseExample">
-        
-        <div class="card card-body">
-            <div class="list-group" id="basic_movements_list">
-              
-            </div>
-        </div>
-      </div>
-      <!--Self aded Values-->
-      <p>
-        <button class="btn btn-success container-fluid" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" onclick="LoadArraySelf()">
-          Moves added by you
-        </button>
-    </p>
-        <div class="collapse" id="collapseExample">
-        
-        <div class="card card-body">
-            <div class="list-group" id="self_added_values_list">
-              
-            </div>
-        </div>
-      </div>
+<body onload="start('div')">
+  <!--Basic List Group-->
+  <div class="list-group selfAddedValues" id="div">
+
+  </div>
       <!--AddItemForm-->
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">add new item</button>
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -108,9 +108,23 @@ Normal heading in or out of a group will be written 0 Lines before the block
         opacity: 1;
     }
 }
-
-
-
+.onloadFive {
+    animation: onloadFiveKeyframe 6s;
+}
+@keyframes onloadFiveKeyframe {
+    0%{
+        opacity: 0;
+        transform: translate(0%,400%);
+    }
+    85%{
+        color: white;
+    }
+    90% {
+        opacity: 1;
+        color: white;
+        transform: translate(0%,400);
+    }
+}
 .buttonAni {
     animation:  button 0.5s;
 }

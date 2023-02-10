@@ -83,6 +83,7 @@ function onload() {
         let removeClassTwo = document.getElementById('removeTwo').classList.remove('onloadTwo');
         let removeClassThree = document.getElementById('body').classList.remove('onloadThree');
         let removeClassFour = document.getElementById('removeFour').classList.remove('onloadFour');
+        let removeClassFive = document.getElementById('removeFive').classList.remove('onloadFive');
     
         
     }
@@ -120,20 +121,6 @@ function startPlaning() {
         netlifyIdentity.open('login')
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //definition
 let clicked ='false'
 var Basic_movements = [
