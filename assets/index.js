@@ -101,6 +101,16 @@ function onload() {
         const user = netlifyIdentity.currentUser();
     },200)
 
+
+    //animated start button
+    var buttonToAnimate = document.getElementById("startButton");
+    buttonToAnimate.addEventListener('mousemove', e => {
+      let rect = e.target.getBoundingClientRect();
+      let x = e.clientX - rect.left;
+      let y = e.clientY - rect.top;
+      buttonToAnimate.style.setProperty('--x', x + 'px');
+      buttonToAnimate.style.setProperty('--y', y + 'px');
+    });
 }
 //animations
 function buttonAni(id,side) {
@@ -121,37 +131,8 @@ function startPlaning() {
         netlifyIdentity.open('login')
     }
 }
-//definition
-let clicked ='false'
-var Basic_movements = [
-    'Landing',
-    'Parkour Roll',
-    'Cat Leap',
-    'Dash Vault',
-    'Monkey Vault',
-    'Kong Vault',
-    'Speed Vault',
-    'Kash Vault',
-    'Two Handed Vault',
-    'Turn Vault',
-    'Precision Jump',
-    'Lazy Vault',
-    'Reverse Vault',
-    'Underbar',
-    'Tic Tac',
-    'strides']
-var self_aded_values = [
 
-]
-var Basic_movements_onclick = [
 
-]
-var Basic_movements_onclick_clicked = [
-
-]
-var Basic_movements_onclick_clicked_color
-
-//buttons
 
 
 //Array
@@ -178,5 +159,6 @@ function loadArraySelf() {
     clicked = 'true';
     }
 }
+
 
 
