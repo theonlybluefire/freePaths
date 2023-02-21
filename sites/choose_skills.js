@@ -6,6 +6,33 @@ var div = []
 
 
 function addItem() {
+    let input = document.getElementById('inputId').value;
+    selfAddedValues.push(input);
+    localStorage.setItem("selfAddedValuesKey", JSON.stringify(selfAddedValues));
+}
+function start(divid) {
+    var selfAddedValues = JSON.parse(localStorage.getItem("selfAddedValuesKey"));
+    for(i=0;i<selfAddedValues.length;i++) {
+        div[i] = document.getElementById(divid).innerHTML += `<button type="button" class="list-group-item list-group-item-action">${selfAddedValues[i]}</button>`
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+function addItem() {
     let input = document.getElementsByTagName('input')[0].value
     console.log('Value added : ',input);
     selfAddedValues.push(input);
@@ -23,4 +50,4 @@ function start(divid){
     for(i=0;i<selfAddedValues.length;i++) {
         div[i] = document.getElementById(divid).innerHTML += `<button type="button" class="list-group-item list-group-item-action">${selfAddedValues[i]}</button>`
     }
-}
+}*/
