@@ -1,9 +1,16 @@
-//add Item
-var selfAddedValues = [
-    'test'
-]
-var div = []
 
+var div = []
+if(JSON.parse(localStorage.getItem('selfAddedValuesKey'))==null) {
+    var addSomething = ['']
+    localStorage.setItem("selfAddedValuesKey", JSON.stringify(addSomething)); 
+}
+var selfAddedValues=JSON.parse(localStorage.getItem("selfAddedValuesKey"));
+
+function start(divid) {
+    for(i=0;i<selfAddedValues.length;i++) {
+        div[i] = document.getElementById(divid).innerHTML += `<button type="button" class="list-group-item list-group-item-action">${selfAddedValues[i]}</button>`
+    }
+}
 
 
 function addItem() {
@@ -11,18 +18,15 @@ function addItem() {
     console.log('inputValue',input);
     selfAddedValues.push(input);
     console.log('Array after push', selfAddedValues);
-    localStorage.setItem("selfAddedValuesKey", JSON.stringify(selfAddedValues));
-    console.log('localStorage Entry',JSON.parse(localStorage.getItem("selfAddedValuesKey")));
     input.value = "";
 }
-function start(divid) {
-    var selfAddedValues = JSON.parse(localStorage.getItem("selfAddedValuesKey"));
-    for(i=0;i<selfAddedValues.length;i++) {
-        div[i] = document.getElementById(divid).innerHTML += `<button type="button" class="list-group-item list-group-item-action">${selfAddedValues[i]}</button>`
-    }
-}
+
 function reload() {
-    location.reload();
+    localStorage.setItem("selfAddedValuesKey", JSON.stringify(selfAddedValues));
+    console.log('localStorage Entry',JSON.parse(localStorage.getItem("selfAddedValuesKey")));
+    setTimeout(function() {
+        location.reload();
+    },100)
 }
 
 
