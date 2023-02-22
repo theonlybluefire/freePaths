@@ -161,7 +161,11 @@ Normal heading in or out of a group will be written 0 Lines before the block
 body {
     background-color: #141414;
 }
-
+.disappear {
+    transition: 1s;
+    opacity: 0;
+    background-color: rgb(14, 14, 14);
+}
 
 /*animated button*/
 .mouse-cursor-gradient-tracking {
@@ -197,3 +201,4 @@ body {
   .mouse-cursor-gradient-tracking:hover::before {
     --size: 200px;
   }
+

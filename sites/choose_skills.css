@@ -1,0 +1,22 @@
+.designList {
+    background-color: black !important;
+    color: white !important;
+    border-radius: 5px;
+    padding: 10px;
+}
+body {
+    background-color: rgb(14, 14, 14);
+    animation: onload 1.5s;
+    overflow-x: hidden
+}
+@keyframes onload{
+    0%{
+        transform: translate(150%,0%);
+    }
+    100%{
+
+    }
+}
+.down {
+    height: 100%;
+}

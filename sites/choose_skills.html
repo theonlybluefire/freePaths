@@ -21,8 +21,12 @@
 
 </head>
 <body onload="start('div')">
+  <div class="text-center">
+    <h2>Configure your Dashboard</h2>
+    <h4>add all movements you already mastered</h4>
+  </div>
   <!--Basic List Group-->
-  <div class="list-group selfAddedValues" id="div">
+  <div class="list-group selfAddedValues container gap-3 down" id="div">
 
   </div>
     <!-- Button trigger modal -->
@@ -36,7 +40,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Add a new Move</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="reload()"></button>
         </div>
         <div class="modal-body">
           <form onsubmit="addItem();return false;" id="formId">
