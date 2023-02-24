@@ -3,27 +3,27 @@
 
 var div = []
 //check if it is nesersary to add a NullValue
-if(JSON.parse(localStorage.getItem('MovesIMasteredKey'))==null) {
+if(JSON.parse(localStorage.getItem('MovesIWantToLearnKey'))==null) {
     var addNullValue = ['']
-    localStorage.setItem("MovesIMasteredKey", JSON.stringify(addNullValue)); 
+    localStorage.setItem("MovesIWantToLearnKey", JSON.stringify(addNullValue)); 
 }
 //define array
-var MovesIMastered=JSON.parse(localStorage.getItem("MovesIMasteredKey"));
+var MovesIWantToLearn=JSON.parse(localStorage.getItem("MovesIWantToLearnKey"));
 //onload start
 function start(divid) {
-    for(i=0;i<MovesIMastered.length;i++) {
-        div[i] = document.getElementById(divid).innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesIMastered[i]}</button>`
+    for(i=0;i<MovesIWantToLearn.length;i++) {
+        div[i] = document.getElementById(divid).innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesIWantToLearn[i]}</button>`
     }
 }
 //add Item to list
 function addItem() {
     let input = document.getElementById('inputId').value;
-    MovesIMastered.push(input);
+    MovesIWantToLearn.push(input);
     let del = document.getElementById('inputId').value = null;
 }
 //reload and save
 function reload() {
-    localStorage.setItem("MovesIMasteredKey", JSON.stringify(MovesIMastered));
+    localStorage.setItem("MovesIWantToLearnKey", JSON.stringify(MovesIWantToLearn));
     setTimeout(function() {
         location.reload();
     },100)
@@ -31,7 +31,7 @@ function reload() {
 function fadeOut(){
     let body = document.getElementById('body').classList.add('fadeOut')
     setTimeout(function() {
-        window.location= "choose_skillsTwo.html"
+        window.location= "dashboard.html"
     },150)
 }
 netlifyIdentity.on('init', user => console.log('init', user));
