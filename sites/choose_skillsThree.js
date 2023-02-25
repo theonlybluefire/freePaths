@@ -31,7 +31,7 @@ function reload() {
 function fadeOut(){
     let body = document.getElementById('body').classList.add('fadeOut')
     setTimeout(function() {
-        window.location= "dashboard.html"
+        window.location= "dashboard/dashboard.html"
     },150)
 }
 netlifyIdentity.on('init', user => console.log('init', user));

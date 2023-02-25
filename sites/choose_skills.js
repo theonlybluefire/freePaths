@@ -34,6 +34,7 @@ function fadeOut(){
         window.location= "choose_skillsTwo.html"
     },150)
 }
+//netlify if user is here
 netlifyIdentity.on('init', user => console.log('init', user));
     netlifyIdentity.on('login', user => console.log('login', user));
     netlifyIdentity.on('logout', () => console.log('Logged out'));
