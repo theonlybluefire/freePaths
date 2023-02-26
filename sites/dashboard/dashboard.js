@@ -20,6 +20,7 @@ function startTraining(conditions) {
         'run up and down'
         ,'go 10 times up-and downstairs'
         ,'do some strethings'
+        ,'train balance on something'
     ]
     
     var MovesIMastered=JSON.parse(localStorage.getItem("MovesIMasteredKey"));
@@ -62,10 +63,6 @@ function startTraining(conditions) {
             MovesIMasteredRandomValue = Math.random() * MovesIMastered.length -1
             MovesIMasteredRandomValue = Math.round(MovesIMasteredRandomValue+0.5)
             MovesIMasteredRandom.push(MovesIMastered[MovesIMasteredRandomValue])
-            //3
-            MovesIMasteredRandomValue = Math.random() * MovesIMastered.length -1
-            MovesIMasteredRandomValue = Math.round(MovesIMasteredRandomValue+0.5)
-            MovesIMasteredRandom.push(MovesIMastered[MovesIMasteredRandomValue])
             //put it into the div
             for(i=0;i<MovesIMasteredRandom.length;i++) {
                 div[i] = document.getElementById('MovesIMastered').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesIMasteredRandom[i]}</button>`
@@ -84,8 +81,86 @@ function startTraining(conditions) {
             MovesIWantToLearnRandomValue = Math.round(MovesIWantToLearnRandomValue)
             console.log(MovesIWantToLearnRandomValue)
             MovesIWantToLearnRandom.push(MovesIWantToLearn[MovesIWantToLearnRandomValue])
+            //2.
+            MovesIWantToLearnRandomValue = Math.random() * MovesIWantToLearn.length
+            MovesIWantToLearnRandomValue = Math.round(MovesIWantToLearnRandomValue)
+            console.log(MovesIWantToLearnRandomValue)
+            MovesIWantToLearnRandom.push(MovesIWantToLearn[MovesIWantToLearnRandomValue])
             console.log(MovesIWantToLearnRandom)
-            let divTwo = document.getElementById('MovesIWantToLearn').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesIWantToLearnRandom}</button>`
+            for(i=0;i<MovesIWantToLearnRandom.length;i++) {
+                div[i] = document.getElementById('MovesIWantToLearn').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesIWantToLearnRandom[i]}</button>`
+            } 
 
-}
+    }
+    if(conditions=='middle') {
+        //warm up
+        let WarmUpRandom = []
+        let WarmUpRandomValue = Math.random() * WarmUp.length -1;
+        WarmUpRandomValue = Math.round(WarmUpRandomValue+0.5);
+
+        WarmUpRandom.push(WarmUp[WarmUpRandomValue])
+        //warm up pick 2. warm up move and push
+        WarmUpRandomValue = Math.random() * WarmUp.length-1;
+        WarmUpRandomValue = Math.round(WarmUpRandomValue+0.5);
+       
+        WarmUpRandom.push(WarmUp[WarmUpRandomValue])
+        //warm up pick 3. warm up move and push
+        WarmUpRandomValue = Math.random() * WarmUp.length-1;
+        WarmUpRandomValue = Math.round(WarmUpRandomValue+0.5);
+        console.log(WarmUpRandomValue)
+        WarmUpRandom.push(WarmUp[WarmUpRandomValue])
+        //warm up pick 4. warm up move and push
+        WarmUpRandomValue = Math.random() * WarmUp.length-1;
+        WarmUpRandomValue = Math.round(WarmUpRandomValue+0.5);
+        console.log(WarmUpRandomValue)
+        WarmUpRandom.push(WarmUp[WarmUpRandomValue])
+        //5.
+        WarmUpRandomValue = Math.random() * WarmUp.length-1;
+        WarmUpRandomValue = Math.round(WarmUpRandomValue+0.5);
+        console.log(WarmUpRandomValue)
+        WarmUpRandom.push(WarmUp[WarmUpRandomValue])
+        //put into the div and visualize
+        for(i=0;i<WarmUpRandom.length;i++) {
+            div[i] = document.getElementById('WarmUp').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${WarmUpRandom[i]}</button>`
+        }
+    //MovesIMastered Section
+        let MovesIMasteredRandom = []
+        let MovesIMasteredRandomValue = Math.random() * MovesIMastered.length -1
+        MovesIMasteredRandomValue = Math.round(MovesIMasteredRandomValue+0.5)
+        MovesIMasteredRandom.push(MovesIMastered[MovesIMasteredRandomValue])
+        //2.
+        MovesIMasteredRandomValue = Math.random() * MovesIMastered.length -1
+        MovesIMasteredRandomValue = Math.round(MovesIMasteredRandomValue+0.5)
+        MovesIMasteredRandom.push(MovesIMastered[MovesIMasteredRandomValue])
+        //3
+        MovesIMasteredRandomValue = Math.random() * MovesIMastered.length -1
+        MovesIMasteredRandomValue = Math.round(MovesIMasteredRandomValue+0.5)
+        MovesIMasteredRandom.push(MovesIMastered[MovesIMasteredRandomValue])
+        //4
+        //put it into the div
+        for(i=0;i<MovesIMasteredRandom.length;i++) {
+            div[i] = document.getElementById('MovesIMastered').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesIMasteredRandom[i]}</button>`
+        }
+    //MovesICan
+        let MovesICanRandom = []
+        let MovesICanRandomValue = Math.random() * MovesICan.length-1
+        MovesICanRandomValue = Math.round(MovesICanRandomValue+0.5)
+        MovesICanRandom.push(MovesICan[MovesICanRandomValue])
+        //2.
+        MovesICanRandomValue = Math.random() * MovesICan.length-1
+        MovesICanRandomValue = Math.round(MovesICanRandomValue+0.5)
+        MovesICanRandom.push(MovesICan[MovesICanRandomValue])
+        for(i=0;i<MovesICanRandom.length;i++) {
+            div[i] = document.getElementById('MovesICan').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesICanRandom[i]}</button>`
+        } 
+    //MovesIWantToLearn
+        let MovesIWantToLearnRandom = []
+        let MovesIWantToLearnRandomValue = Math.random() * MovesIWantToLearn.length
+        MovesIWantToLearnRandomValue = Math.round(MovesIWantToLearnRandomValue)
+        console.log(MovesIWantToLearnRandomValue)
+        MovesIWantToLearnRandom.push(MovesIWantToLearn[MovesIWantToLearnRandomValue])
+        console.log(MovesIWantToLearnRandom)
+        let divTwo = document.getElementById('MovesIWantToLearn').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesIWantToLearnRandom}</button>`
+
+    }
 }
