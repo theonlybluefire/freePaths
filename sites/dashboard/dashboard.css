@@ -1,9 +1,47 @@
+.disappear {
+    
+    animation: fadeIn 4s;
+}
+.welcomeScreen {
+    color: white;
+    animation: welcomeScreenAni 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes welcomeScreenAni {
+    0% {
+
+    }
+    90% {
+        opacity: 0;
+    
+    }
+    100% {
+        display: none;
+    }    
+
+}
 body {
     background-color: black;
-    animation: fadeIn 1s;
 }
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
+    75% {
+        opacity: 0;
+    }
+}
+.boxes {
+    background-color: black;
+    border-radius: 20px;
+    border-color: green;
+    border: 10px solid;
+    transition: 1s;
+    padding: 20px;
+    transform: translate(0%,20px);
+}
+.boxes:hover {
+    border-radius: 25px;
+    border-color: white;
+    transition: 1s;
 }
