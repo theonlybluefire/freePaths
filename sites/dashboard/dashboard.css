@@ -1,22 +1,28 @@
 .disappear {
     
-    animation: fadeIn 4s;
+    animation: fadeIn 3.5s;
 }
 .welcomeScreen {
-    color: white;
-    animation: welcomeScreenAni 2s;
+    opacity: 0;
+    animation: welcomeScreenAni 3s;
     animation-fill-mode: forwards;
 }
 @keyframes welcomeScreenAni {
     0% {
-
+        opacity: 1;
+        color: white;
+        transform: translate(0%,500%);
     }
     90% {
         opacity: 0;
+        color: white;
+
     
     }
     100% {
         display: none;
+        color: white;
+        opacity: 0;
     }    
 
 }
@@ -42,6 +48,6 @@ body {
 }
 .boxes:hover {
     border-radius: 25px;
-    border-color: white;
+    border-color: rgb(54, 54, 54);
     transition: 1s;
 }

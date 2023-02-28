@@ -14,8 +14,8 @@ netlifyIdentity.on('init', user => console.log('init', user));
 setTimeout(function() {
     const user = netlifyIdentity.currentUser();
     let box = document.getElementById('welcomeScreen').innerHTML += user.user_metadata.full_name
-    
-})
+    let boxTwo = document.getElementById('welcomeBox').classList.add('welcomeScreen')
+},100)
 
 
 function startTraining(conditions) {
