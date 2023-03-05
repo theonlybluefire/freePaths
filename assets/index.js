@@ -28,6 +28,11 @@ function onload() {
       buttonToAnimate.style.setProperty('--x', x + 'px');
       buttonToAnimate.style.setProperty('--y', y + 'px');
     });
+
+    //forwarding
+    if (window.localStorage.getItem('dashboardForwarding')=='true') {
+        window.location = '../sites/dashboard/dashboard.html'
+    }
 }
 //animations
 function buttonAni(id,side) {

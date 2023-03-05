@@ -10,6 +10,14 @@ netlifyIdentity.on('init', user => console.log('init', user));
             window.location = "../error/error.html"
         }
     },200)
+//del
+function del() {
+    window.localStorage.clear()
+    window.sessionStorage.clear()
+    window.location = '../../assets/index.html'
+}
+//dashboard forwarding
+localStorage.setItem('dashboardForwarding','true');
 //welcome Screen
 setTimeout(function() {
     const user = netlifyIdentity.currentUser();
@@ -31,7 +39,7 @@ function startTraining(conditions) {
     var MovesIMastered=JSON.parse(localStorage.getItem("MovesIMasteredKey"));
     var MovesICan=JSON.parse(localStorage.getItem("MovesICanKey"));
     var MovesIWantToLearn=JSON.parse(localStorage.getItem("MovesIWantToLearnKey"));
-    
+
     //algorithmus
     if(conditions=='good') {
         //warm up
@@ -166,7 +174,7 @@ function startTraining(conditions) {
         MovesIWantToLearnRandom.push(MovesIWantToLearn[MovesIWantToLearnRandomValue])
         console.log(MovesIWantToLearnRandom)
         let divTwo = document.getElementById('MovesIWantToLearn').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesIWantToLearnRandom}</button>`
-
+    
     }
     if(conditions=='bad') {
         //warm up
