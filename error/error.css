@@ -1,0 +1,24 @@
+body {
+    background-color: black;
+}
+.accordion-body {
+    background-color: rgb(34, 34, 34) !important;
+    color: white;
+    border-radius: 10px;
+}
+.accordion-button {
+    background-color: rgb(20, 20, 20) !important;
+    color: white; 
+
+}
+.accordion {
+    background-color: black !important;
+
+}
+.accordion-collapse {
+    background-color: black !important;
+}
+.accordion-item {
+    background-color: black !important;
+    border-color: black;
+}
