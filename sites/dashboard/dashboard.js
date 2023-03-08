@@ -63,6 +63,11 @@ function startTraining(conditions) {
 
     //algorithmus
     if(conditions=='good') {
+        //clear
+        let clear = document.getElementById('WarmUp').innerHTML = ""
+        clear = document.getElementById('MovesICan').innerHTML = ""
+        clear = document.getElementById('MovesIMastered').innerHTML = ""
+        clear = document.getElementById('MovesIWantToLearn').innerHTML = ""
         //warm up
             let WarmUpRandom = []
             let WarmUpRandomValue = Math.random() * WarmUp.length -1;
@@ -127,6 +132,11 @@ function startTraining(conditions) {
 
     }
     if(conditions=='middle') {
+        //clear
+        let clear = document.getElementById('WarmUp').innerHTML = ""
+        clear = document.getElementById('MovesICan').innerHTML = ""
+        clear = document.getElementById('MovesIMastered').innerHTML = ""
+        clear = document.getElementById('MovesIWantToLearn').innerHTML = ""
         //warm up
         let WarmUpRandom = []
         let WarmUpRandomValue = Math.random() * WarmUp.length -1;
@@ -198,6 +208,11 @@ function startTraining(conditions) {
     
     }
     if(conditions=='bad') {
+        //clear
+        let clear = document.getElementById('WarmUp').innerHTML = ""
+        clear = document.getElementById('MovesICan').innerHTML = ""
+        clear = document.getElementById('MovesIMastered').innerHTML = ""
+        clear = document.getElementById('MovesIWantToLearn').innerHTML = ""
         //warm up
         let WarmUpRandom = []
         WarmUpRandom.push('do some balancing (on a rail)')
