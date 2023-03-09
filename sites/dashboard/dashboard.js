@@ -11,6 +11,13 @@ netlifyIdentity.on('init', user => console.log('init', user));
             window.location = "../error/error.html"
         }
     },200)
+setTimeout(function(){ 
+    //loadSaveTraining
+    let One = document.getElementById('WarmUp').innerHTML += window.localStorage.getItem('savedTrainingWarmUp')
+    let Two = document.getElementById('MovesIMastered').innerHTML += window.localStorage.getItem('savedTrainingMovesIMastered')
+    let Three = document.getElementById('MovesICan').innerHTML += window.localStorage.getItem('savedTrainingMovesICan')
+    let Four = document.getElementById('MovesIWantToLearn').innerHTML += window.localStorage.getItem('savedTrainingMovesIWantToLearn')
+},200)
 //del
 function del() {
     window.localStorage.clear()
@@ -48,13 +55,18 @@ function startTraining(conditions) {
 
     //algorithmus
     if(conditions=='good') {
+        //clear One
+        window.localStorage.removeItem('savedTrainingWarmUp')
+        window.localStorage.removeItem('savedTrainingMovesIMastered')
+        window.localStorage.removeItem('savedTrainingMovesICan')
+        window.localStorage.removeItem('savedTrainingMovesIWantToLearn')
         //clear
         let clear = document.getElementById('WarmUp').innerHTML = ""
         clear = document.getElementById('MovesICan').innerHTML = ""
         clear = document.getElementById('MovesIMastered').innerHTML = ""
         clear = document.getElementById('MovesIWantToLearn').innerHTML = ""
         //warm up
-            let WarmUpRandom = []
+            var WarmUpRandom = []
             let WarmUpRandomValue = Math.random() * WarmUp.length -1;
             WarmUpRandomValue = Math.round(WarmUpRandomValue+0.5);
             console.log(WarmUpRandomValue)
@@ -79,7 +91,7 @@ function startTraining(conditions) {
                 div[i] = document.getElementById('WarmUp').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${WarmUpRandom[i]}</button>`
             }
         //MovesIMastered Section
-            let MovesIMasteredRandom = []
+            var MovesIMasteredRandom = []
             let MovesIMasteredRandomValue = Math.random() * MovesIMastered.length -1
             MovesIMasteredRandomValue = Math.round(MovesIMasteredRandomValue+0.5)
             MovesIMasteredRandom.push(MovesIMastered[MovesIMasteredRandomValue])
@@ -88,7 +100,7 @@ function startTraining(conditions) {
                 div[i] = document.getElementById('MovesIMastered').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesIMasteredRandom[i]}</button>`
             }
         //MovesICan
-            let MovesICanRandom = []
+            var MovesICanRandom = []
             let MovesICanRandomValue = Math.random() * MovesICan.length-1
             MovesICanRandomValue = Math.round(MovesICanRandomValue+0.5)
             MovesICanRandom.push(MovesICan[MovesICanRandomValue])
@@ -112,7 +124,7 @@ function startTraining(conditions) {
                 div[i] = document.getElementById('MovesICan').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesICanRandom[i]}</button>`
             } 
         //MovesIWantToLearn
-            let MovesIWantToLearnRandom = []
+            var MovesIWantToLearnRandom = []
             let MovesIWantToLearnRandomValue = Math.random() * MovesIWantToLearn.length
             MovesIWantToLearnRandomValue = Math.round(MovesIWantToLearnRandomValue)
             console.log(MovesIWantToLearnRandomValue)
@@ -129,13 +141,18 @@ function startTraining(conditions) {
 
     }
     if(conditions=='middle') {
+        //clear One
+        window.localStorage.removeItem('savedTrainingWarmUp')
+        window.localStorage.removeItem('savedTrainingMovesIMastered')
+        window.localStorage.removeItem('savedTrainingMovesICan')
+        window.localStorage.removeItem('savedTrainingMovesIWantToLearn')
         //clear
         let clear = document.getElementById('WarmUp').innerHTML = ""
         clear = document.getElementById('MovesICan').innerHTML = ""
         clear = document.getElementById('MovesIMastered').innerHTML = ""
         clear = document.getElementById('MovesIWantToLearn').innerHTML = ""
         //warm up
-        let WarmUpRandom = []
+        var WarmUpRandom = []
         let WarmUpRandomValue = Math.random() * WarmUp.length -1;
         WarmUpRandomValue = Math.round(WarmUpRandomValue+0.5);
 
@@ -165,7 +182,7 @@ function startTraining(conditions) {
             div[i] = document.getElementById('WarmUp').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${WarmUpRandom[i]}</button>`
         }
     //MovesIMastered Section
-        let MovesIMasteredRandom = []
+        var  MovesIMasteredRandom = []
         let MovesIMasteredRandomValue = Math.random() * MovesIMastered.length -1
         MovesIMasteredRandomValue = Math.round(MovesIMasteredRandomValue+0.5)
         MovesIMasteredRandom.push(MovesIMastered[MovesIMasteredRandomValue])
@@ -183,7 +200,7 @@ function startTraining(conditions) {
             div[i] = document.getElementById('MovesIMastered').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesIMasteredRandom[i]}</button>`
         }
     //MovesICan
-        let MovesICanRandom = []
+        var MovesICanRandom = []
         let MovesICanRandomValue = Math.random() * MovesICan.length-1
         MovesICanRandomValue = Math.round(MovesICanRandomValue+0.5)
         MovesICanRandom.push(MovesICan[MovesICanRandomValue])
@@ -195,7 +212,7 @@ function startTraining(conditions) {
             div[i] = document.getElementById('MovesICan').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesICanRandom[i]}</button>`
         } 
     //MovesIWantToLearn
-        let MovesIWantToLearnRandom = []
+        var MovesIWantToLearnRandom = []
         let MovesIWantToLearnRandomValue = Math.random() * MovesIWantToLearn.length
         MovesIWantToLearnRandomValue = Math.round(MovesIWantToLearnRandomValue)
         console.log(MovesIWantToLearnRandomValue)
@@ -205,13 +222,18 @@ function startTraining(conditions) {
     
     }
     if(conditions=='bad') {
+        //clear One
+        window.localStorage.removeItem('savedTrainingWarmUp')
+        window.localStorage.removeItem('savedTrainingMovesIMastered')
+        window.localStorage.removeItem('savedTrainingMovesICan')
+        window.localStorage.removeItem('savedTrainingMovesIWantToLearn')
         //clear
         let clear = document.getElementById('WarmUp').innerHTML = ""
         clear = document.getElementById('MovesICan').innerHTML = ""
         clear = document.getElementById('MovesIMastered').innerHTML = ""
         clear = document.getElementById('MovesIWantToLearn').innerHTML = ""
         //warm up
-        let WarmUpRandom = []
+        var WarmUpRandom = []
         WarmUpRandom.push('do some balancing (on a rail)')
         let WarmUpRandomValue = Math.random() * WarmUp.length -1;
         WarmUpRandomValue = Math.round(WarmUpRandomValue+0.5);
@@ -226,7 +248,7 @@ function startTraining(conditions) {
             div[i] = document.getElementById('WarmUp').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${WarmUpRandom[i]}</button>`
         }
     //MovesIMastered Section
-        let MovesIMasteredRandom = []
+        var MovesIMasteredRandom = []
         let MovesIMasteredRandomValue = Math.random() * MovesIMastered.length -1
         MovesIMasteredRandomValue = Math.round(MovesIMasteredRandomValue+0.5)
         MovesIMasteredRandom.push(MovesIMastered[MovesIMasteredRandomValue])
@@ -251,7 +273,7 @@ function startTraining(conditions) {
             div[i] = document.getElementById('MovesIMastered').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesIMasteredRandom[i]}</button>`
         }
     //MovesICan
-        let MovesICanRandom = []
+        var MovesICanRandom = []
         let MovesICanRandomValue = Math.random() * MovesICan.length-1
         MovesICanRandomValue = Math.round(MovesICanRandomValue+0.5)
         MovesICanRandom.push(MovesICan[MovesICanRandomValue])
@@ -269,13 +291,18 @@ function startTraining(conditions) {
         } 
     }
     if(conditions=='noPlan') {
-          //clear
+            //clear One
+            window.localStorage.removeItem('savedTrainingWarmUp')
+            window.localStorage.removeItem('savedTrainingMovesIMastered')
+            window.localStorage.removeItem('savedTrainingMovesICan')
+            window.localStorage.removeItem('savedTrainingMovesIWantToLearn')
+            //clear
           let clear = document.getElementById('WarmUp').innerHTML = ""
           clear = document.getElementById('MovesICan').innerHTML = ""
           clear = document.getElementById('MovesIMastered').innerHTML = ""
           clear = document.getElementById('MovesIWantToLearn').innerHTML = ""
           //warm up
-          let WarmUpRandom = []
+          var WarmUpRandom = []
           let WarmUpRandomValue = Math.random() * WarmUp.length -1;
           WarmUpRandomValue = Math.round(WarmUpRandomValue+0.5);
           console.log(WarmUpRandomValue)
@@ -297,7 +324,7 @@ function startTraining(conditions) {
               div[i] = document.getElementById('WarmUp').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${WarmUpRandom[i]}</button>`
           }
       //MovesIMastered Section
-          let MovesIMasteredRandom = []
+          var MovesIMasteredRandom = []
           let MovesIMasteredRandomValue = Math.random() * MovesIMastered.length -1
           MovesIMasteredRandomValue = Math.round(MovesIMasteredRandomValue+0.5)
           MovesIMasteredRandom.push(MovesIMastered[MovesIMasteredRandomValue])
@@ -314,7 +341,7 @@ function startTraining(conditions) {
               div[i] = document.getElementById('MovesIMastered').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesIMasteredRandom[i]}</button>`
           }
       //MovesICan
-          let MovesICanRandom = []
+          var MovesICanRandom = []
           let MovesICanRandomValue = Math.random() * MovesICan.length-1
           MovesICanRandomValue = Math.round(MovesICanRandomValue+0.5)
           MovesICanRandom.push(MovesICan[MovesICanRandomValue])
@@ -331,7 +358,7 @@ function startTraining(conditions) {
               div[i] = document.getElementById('MovesICan').innerHTML += `<button type="button" class="list-group-item list-group-item-action designList">${MovesICanRandom[i]}</button>`
           } 
         //MovesIWantToLearn
-        let MovesIWantToLearnRandom = []
+        var MovesIWantToLearnRandom = []
         let MovesIWantToLearnRandomValue = Math.random() * MovesIWantToLearn.length
         MovesIWantToLearnRandomValue = Math.round(MovesIWantToLearnRandomValue)
         console.log(MovesIWantToLearnRandomValue)
@@ -348,4 +375,10 @@ function startTraining(conditions) {
       }
     }
     
+function saveTraining() {
+    window.localStorage.setItem('savedTrainingWarmUp',document.getElementById('WarmUp').innerHTML)
+    window.localStorage.setItem('savedTrainingMovesIMastered',document.getElementById('MovesIMastered').innerHTML)
+    window.localStorage.setItem('savedTrainingMovesICan',document.getElementById('MovesICan'))
+    window.localStorage.setItem('savedTrainingMovesIWantToLearn',document.getElementById('MovesIMastered').innerHTML)
+}
 
