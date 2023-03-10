@@ -13,10 +13,10 @@ netlifyIdentity.on('init', user => console.log('init', user));
     },200)
 setTimeout(function(){ 
     //loadSaveTraining
-    let One = document.getElementById('WarmUp').innerHTML += window.localStorage.getItem('savedTrainingWarmUp')
-    let Two = document.getElementById('MovesIMastered').innerHTML += window.localStorage.getItem('savedTrainingMovesIMastered')
-    let Three = document.getElementById('MovesICan').innerHTML += window.localStorage.getItem('savedTrainingMovesICan')
-    let Four = document.getElementById('MovesIWantToLearn').innerHTML += window.localStorage.getItem('savedTrainingMovesIWantToLearn')
+    let One = document.getElementById('WarmUp').innerHTML = window.localStorage.getItem('savedTrainingWarmUp')
+    let Two = document.getElementById('MovesIMastered').innerHTML = window.localStorage.getItem('savedTrainingMovesIMastered')
+    let Three = document.getElementById('MovesICan').innerHTML = window.localStorage.getItem('savedTrainingMovesICan')
+    let Four = document.getElementById('MovesIWantToLearn').innerHTML = window.localStorage.getItem('savedTrainingMovesIWantToLearn')
 },200)
 //del
 function del() {
@@ -376,9 +376,12 @@ function startTraining(conditions) {
     }
     
 function saveTraining() {
+    console.log('Before Loading into Local Storage',document.getElementById('WarmUp').innerHTML,document.getElementById('MovesIMastered').innerHTML,document.getElementById('MovesICan'),document.getElementById('MovesIMastered').innerHTML)
     window.localStorage.setItem('savedTrainingWarmUp',document.getElementById('WarmUp').innerHTML)
     window.localStorage.setItem('savedTrainingMovesIMastered',document.getElementById('MovesIMastered').innerHTML)
-    window.localStorage.setItem('savedTrainingMovesICan',document.getElementById('MovesICan'))
+    window.localStorage.setItem('savedTrainingMovesICan',document.getElementById('MovesICan').innerHTML)
     window.localStorage.setItem('savedTrainingMovesIWantToLearn',document.getElementById('MovesIMastered').innerHTML)
+    console.error('After')
+    console.log('After:',localStorage.getItem('savedTrainingWarmUp'),localStorage.getItem('savedTrainingMovesIMastered'), localStorage.getItem('savedTrainingMovesICan'),localStorage.getItem('savedTrainingMovesIWantToLearn'))
 }
 
