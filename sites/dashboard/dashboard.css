@@ -44,7 +44,7 @@ body {
     border: 10px solid;
     transition: 1s;
     padding: 20px;
-    transform: translate(0%,20px);
+
 }
 .boxes:hover {
     border-radius: 25px;

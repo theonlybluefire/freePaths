@@ -376,12 +376,21 @@ function startTraining(conditions) {
     }
     
 function saveTraining() {
-    console.log('Before Loading into Local Storage',document.getElementById('WarmUp').innerHTML,document.getElementById('MovesIMastered').innerHTML,document.getElementById('MovesICan'),document.getElementById('MovesIMastered').innerHTML)
+    window.localStorage.removeItem('savedTrainingWarmUp')
+    window.localStorage.removeItem('savedTrainingMovesIMastered')
+    window.localStorage.removeItem('savedTrainingMovesICan')
+    window.localStorage.removeItem('savedTrainingMovesIWantToLearn')
+    console.log('Before Loading into Local Storage',document.getElementById('WarmUp').innerHTML,'MovesIMastered',document.getElementById('MovesIMastered').innerHTML,'MovesICan',document.getElementById('MovesICan'),'MovesIWantToLearn',document.getElementById('MovesIMastered').innerHTML)
     window.localStorage.setItem('savedTrainingWarmUp',document.getElementById('WarmUp').innerHTML)
     window.localStorage.setItem('savedTrainingMovesIMastered',document.getElementById('MovesIMastered').innerHTML)
     window.localStorage.setItem('savedTrainingMovesICan',document.getElementById('MovesICan').innerHTML)
-    window.localStorage.setItem('savedTrainingMovesIWantToLearn',document.getElementById('MovesIMastered').innerHTML)
-    console.error('After')
+    window.localStorage.setItem('savedTrainingMovesIWantToLearn',document.getElementById('MovesIWantToLearn').innerHTML)
+    console.log('After')
     console.log('After:',localStorage.getItem('savedTrainingWarmUp'),localStorage.getItem('savedTrainingMovesIMastered'), localStorage.getItem('savedTrainingMovesICan'),localStorage.getItem('savedTrainingMovesIWantToLearn'))
+    const toastLiveExample = document.getElementById('liveToast')
+    const toast = new bootstrap.Toast(toastLiveExample)
+    toast.show()
+
 }
+
 

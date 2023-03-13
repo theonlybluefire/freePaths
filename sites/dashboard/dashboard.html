@@ -75,7 +75,7 @@
   </div>
   <!--Rest-->
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger disappear" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-danger disappear buttonTwo" data-bs-toggle="modal" data-bs-target="#exampleModal">
   delete Data
 </button>
 
@@ -99,10 +99,23 @@
       </div>
     </div>
   </div>
-  <button type="button" class="btn btn-primary disappear" onclick="saveTraining()">
+  <button type="button" class="btn btn-primary disappear buttonTwo" onclick="saveTraining()">
     save this training
   </button>
 
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+
+        <strong class="me-auto">System</strong>
+        <small>Yet</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Your Training has been saved. It will load the next time you open this page.
+      </div>
+    </div>
+  </div>
  
 
  <!--Botstrap JS-->
