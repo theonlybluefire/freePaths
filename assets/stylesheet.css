@@ -9,7 +9,9 @@ Group Blocks heading will be written 1 Line before the other blocks
 Normal heading in or out of a group will be written 0 Lines before the block
 */
 /* Positioning*/
-
+* {
+    cursor: url(../images/cursor.png), auto;
+}
 .middle {
     width: 25%;
     height: auto;

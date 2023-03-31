@@ -1,3 +1,6 @@
+* {
+    cursor: url(../../images/cursor.png), auto;
+}
 .disappear {
     
     animation: fadeIn 3.5s;
