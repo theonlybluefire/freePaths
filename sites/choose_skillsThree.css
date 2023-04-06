@@ -29,3 +29,6 @@ body {
         transform: translate(-150%,0%);
     }
 }
+.grey {
+    color: rgb(119, 119, 119);
+}
