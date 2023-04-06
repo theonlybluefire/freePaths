@@ -17,5 +17,5 @@ freePaths is only available to special users, but you can set up your own enviro
 ### 📜 | Information to local environment
 The account you create will be saved in your Netlify site, we don't see your email or your password, so your account is safe, your data will not be saved in your account, it will be saved in the Storage of your browser, so you need to configure the project on every new device.
 
-🔏 | Privacy
+# 🔏 | Privacy
 We don't use or collect your data in any possible way.
