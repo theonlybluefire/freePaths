@@ -1,8 +1,7 @@
 # 🔮 | freePaths
-🦾 | freePaths is a website for freerunners. We want to improve the training and make sure you achieve your goals. Learn how to set up a local environment.
+🦾 | Little source to a website. Main Intention is to improve the training of freerunners. It generates some random ideas for your next session
 
-# 📫 | How to set up a local environment
-freePaths is only available to special users, but you can set up your own environment, to use it. The availability of the Netlify sites is caused by the German laws.
+# 📫 | How to set up your own website with the source code
 
 ## 🎉 | Steps
 1. Download the project files.
@@ -14,8 +13,8 @@ freePaths is only available to special users, but you can set up your own enviro
 7. Click on start and create an account.
 8. Congratulations  ! Now you can use our project.
 
-### 📜 | Information to local environment
+### 📜 | Information
 The account you create will be saved in your Netlify site, we don't see your email or your password, so your account is safe, your data will not be saved in your account, it will be saved in the Storage of your browser, so you need to configure the project on every new device.
 
 # 🔏 | Privacy
-We don't use or collect your data in any possible way.
+I don't want your data. Keep it with you !
